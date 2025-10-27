@@ -1,0 +1,195 @@
+.login-page {
+  font-family: "Segoe UI", Inter, system-ui, Arial, sans-serif;
+  min-height: 100vh;
+  background: #f1f8f5;
+  display: flex;
+  flex-direction: column;
+  color: #1f2937;
+}
+
+/* ---------- Header ---------- */
+.login-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 60px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-logo {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+}
+
+.brand-name {
+  font-size: 30px;
+  color: #0f172a;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.auth-links {
+  display: flex;
+  align-items: center;
+  gap: 42px;              /* more spacing */
+  font-size: 20px;         /* ✅ enlarged font */
+  font-weight: 600;        /* ✅ bolder */
+  color: #1f2937;
+  cursor: pointer;
+}
+
+.auth-links span::before {
+  margin-right: 6px;
+  font-size: 18px;
+}
+
+.auth-links span:first-child::before {
+  content: "🔒";
+}
+
+.auth-links span:last-child::before {
+  content: "↪️";
+}
+
+.auth-links span:hover {
+  color: #2563eb;                /* hover blue */
+  transition: color 0.2s ease;
+}
+
+/* ---------- Body Layout ---------- */
+.login-body {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 60px;
+}
+
+.login-container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  max-width: 1000px;
+  width: 100%;
+  padding: 0 40px;
+}
+
+.login-illustration {
+  flex: 1;
+  text-align: center;
+}
+
+.login-illustration img {
+  max-width: 100%;          /* ✅ slightly larger */
+  height: auto;
+  transform: scale(1.1);    /* ✅ zoom it a bit */
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/* ---------- Card ---------- */
+.login-card {
+  flex: 0 0 360px;
+  background: #ffffff;
+  padding: 36px 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+}
+
+.login-card h2 {
+  text-align: center;
+  margin-bottom: 28px;
+  color: #0f172a;
+  font-size: 28px;                /* ✅ slightly larger heading */
+  font-weight: 700;
+}
+
+.login-card .input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.login-card .input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+.error-box {
+  color: #b91c1c;
+  background: #fee2e2;
+  padding: 6px 10px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.login-card .btn {
+  width: 100%;
+  padding: 12px 0;
+  font-size: 17px;
+  font-weight: 600;
+  border-radius: 10px;
+  margin-top: 6px;
+  background: #1f2937;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.login-card .btn:hover {
+  background: #111827;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 16px;
+  font-size: 15px;
+  color: #374151;
+}
+
+.remember input {
+  width: 16px;
+  height: 16px;
+  accent-color: #2563eb;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 800px) {
+  .login-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .login-illustration {
+    display: none;
+  }
+  .login-card {
+    width: 100%;
+    max-width: 380px;
+  }
+}
+.success-box {
+  color: #065f46;
+  background: #d1fae5;
+  padding: 6px 10px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  text-align: center;
+}
